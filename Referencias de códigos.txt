@@ -1,0 +1,6 @@
+LU:
+https://www.lawebdelprogramador.com/foros/Matlab/796902-descomposicion-LU-matlab.html
+
+RQ gs:
+cuaderno, dado por el profe.
+
