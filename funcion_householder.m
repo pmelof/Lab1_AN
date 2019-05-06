@@ -2,7 +2,7 @@
 % A a tridiagonal o Hessenberg superior
 % usado en el cálculo de autovalores
 function[sol, error] = funcion_householder(A, b)
-    [m n] = size(A);
+    [m, n] = size(A);
 
     R= A;
     Q = eye(m,m);

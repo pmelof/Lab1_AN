@@ -12,3 +12,6 @@ https://stackoverflow.com/questions/13438073/qr-decomposition-algorithm-using-gi
 
 Householder:
 http://programacionamartillazos.blogspot.com/2014/08/algoritmos-para-calcular-la.html
+
+Jacobi y Seidel:
+http://itsr-metodos-numericos.blogspot.com/
