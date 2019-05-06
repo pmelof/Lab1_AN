@@ -4,9 +4,9 @@
 
 function [Q,R] = funcion_gs(A)
 
-[m, n] = size(A);
+[m, n] = size(A);       %m = filas, n = columnas.
 Q = A;
-R = zeros(n);
+R = zeros(n);           %nueva matriz R, mismo tamaño que A, llena de ceros.
 
 for k=1:n
     for i=1:k-1
