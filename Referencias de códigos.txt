@@ -7,5 +7,8 @@ cuaderno, dado por el profe.
 Cholesky:
 https://sites.google.com/site/pn20111/metodos-para-la-solucion-de-sistemas-de-ecuaciones-e-interpolacion/3-factorizacion-directa-de-matrices/3-3-cholesky/codigo-matlab
 
-Givens: ¿?
+Givens:
 https://stackoverflow.com/questions/13438073/qr-decomposition-algorithm-using-givens-rotations
+
+Householder:
+http://programacionamartillazos.blogspot.com/2014/08/algoritmos-para-calcular-la.html

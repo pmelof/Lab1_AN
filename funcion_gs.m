@@ -2,11 +2,13 @@
 %donde A = Q*R.
 %Aunque parece que en este caso A=R*Q.
 
-function [Q,R] = funcion_gs(A)
+function [sol, error] = funcion_gs(A, b)
 
 [m, n] = size(A);       %m = filas, n = columnas.
 Q = A;
 R = zeros(n);           %nueva matriz R, mismo tamaño que A, llena de ceros.
+sol = [];
+error=0;
 
 for k=1:n
     for i=1:k-1
@@ -16,4 +18,6 @@ for k=1:n
     R(k, k) = norm(Q(:, k));
     Q(:, k) = Q(:, k)/R(k, k);
 end
+sol = inv(R)*Q'*b;
+error = norm(eye(m)-inv(Q*R)*A);
 end
