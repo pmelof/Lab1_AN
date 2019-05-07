@@ -1,10 +1,10 @@
 
 
 function [X, error] = funcion_gjacobi(A, b)
-    z = 100;        %n° iteraciones.
+    z = 100;            %n° iteraciones.
     [m, n] = size(A);
 
-    X0=zeros(1,n);
+    X0=zeros(1,n);      %vector inicial o punto inicial.
     for f=1:z
         for i=1:n
             suma=0;
