@@ -15,3 +15,17 @@ http://programacionamartillazos.blogspot.com/2014/08/algoritmos-para-calcular-la
 
 Jacobi y Seidel:
 http://itsr-metodos-numericos.blogspot.com/
+
+
+----- INFORME -----
+Métodos numéricos:
+http://seduca.uaemex.mx/material/LIA/MN/Cnt1.php
+
+Newton-Raphson:
+https://es.wikipedia.org/wiki/M%C3%A9todo_de_Newton
+
+Cholesky:
+http://personal.us.es/echevarria/asig/cn1/ApuntesPractica4.pdf
+
+
+

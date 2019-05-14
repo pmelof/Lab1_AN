@@ -1,5 +1,6 @@
-function[res, resultValues,tiempo, opCounter] =funcion_gseidel(A,B,iter)
+% Converge siempre que la matriz sea dominante, simétrica y positiva.
 
+function[res, error, opCounter, time] =funcion_gseidel(A,B,iter)
 
 vectorResultados=[]; 
 tic;
@@ -9,6 +10,7 @@ opCounter = 0;
 resultValues=[];
 aux = [];
 X =zeros(1,nFunctions)';
+
  for p=1:iter
     for i=1:nFunctions
       for j=1:i-1 
@@ -25,9 +27,13 @@ X =zeros(1,nFunctions)';
             result=0;
     end
     %Calculo de error relativo con el valor anterior.
-    resultValues= [resultValues,X];
+    resultValues= [resultValues,X]; 
+    if (p>1)
+        errorActual = norm((X-resultValues(:,end-1)))/norm(X);  
+        error(p) = errorActual;
+    end
  end
  resultValues =resultValues';
- tiempo = toc;
  res = resultValues(iter, :);
+ time = toc;
 end

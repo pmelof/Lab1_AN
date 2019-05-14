@@ -1,4 +1,5 @@
- function [c,s] = GivensRotation(a,b)
+ function [c,s, opCounter] = GivensRotation(a,b)
+ opCounter = 0;
         if b == 0
             c = 1;
             s = 0;
@@ -13,4 +14,5 @@
                 s = c*r;
             end
         end
+        opCounter = opCounter + 12;
     end

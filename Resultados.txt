@@ -1,0 +1,23 @@
+-------------------------------------------------------------
+Matriz 4225:
+
+- Tiempo total:  2.075696298726938e+04
+- Tiempos:
+	78,2991459390143	433,560002221790	848,601959039366	20756,6847647982
+	t6= jacobi		t1= gram-schmidt	t2= LU			t5=householder
+- Errores:
+	8,43707475179689e-14	1,28656685648581e-14	1,29544410377674e-13
+	e1=gram-schmidt		e2= LU			e5= householder
+    e6 jacobi aparte en tabla
+- Costos:
+	5355610000,00000	53556100	33800	67600
+	c6=jacobi		c1= gs		c2= LU	c5=householder
+- Resultados:
+	blue=r5=householder
+	gren=r1=gs
+	red=r2=LU
+	c=r6=jacobi
+----------------------------------------------------------------
+----------------------------------------------------------------
+Matriz 1089:
+

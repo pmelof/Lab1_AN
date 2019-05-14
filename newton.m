@@ -7,7 +7,7 @@ tol = 10.^-20;  %tol is a converge tolerance
 x1=0; 
 x2=0; 
 x3=0; 
-iter= 0; %iterations 
+iter= 10; %iterations 
 xnew =[x1;x2;x3]; 
 %xold = zeros(size(xnew));
 xold=[37;5;3];
@@ -43,5 +43,19 @@ while norm(xnew - xold) > tol
     
     % Applying the Newton-Raphson method 
     xnew = xold - J\[f;g;h]; 
-    disp(sprintf('iter=%6.15f, x1=%6.15f, x2=%6.15f, x3=%6.15f', iter,xnew)); 
+    %disp(sprintf('iter=%6.15f, x1=%6.15f, x2=%6.15f, x3=%6.15f', iter,xnew)); 
 end
+
+%gráfico
+figure
+plot(x1, "-.r")
+title("Newton multivariable")
+hold on
+plot(x2, "-.b")
+hold on
+plot(x3, "-.g")
+xlabel("iteración")
+ylabel("valor")
+
+
+
