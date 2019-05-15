@@ -4,26 +4,27 @@
 clear all
 tic;
 %fprintf("Newton\n")
-%newton;
+%newton;            %Newton varias variables.
 
-% A = load('sistemas/289x289/A289.dat');
-% b = load('sistemas/289x289/b289.dat');
 resultados=[];
 costos=[];
 tiempo=[];
 errores=[];
 
-A = load('sistemas/1089x1089/A1089.dat');
-b = load('sistemas/1089x1089/b1089.dat');
+A = load('sistemas/289x289/A289.dat');
+b = load('sistemas/289x289/b289.dat');
+
+% A = load('sistemas/1089x1089/A1089.dat');
+% b = load('sistemas/1089x1089/b1089.dat');
 
 % A = load('sistemas/4225x4225/A4225.dat');
 % b = load('sistemas/4225x4225/b4225.dat');
 
 
-
 [n,m]=size(A);
 if n==m       %matriz cuadrada.
-    disp = dispersa(A); %ve si la matriz es dispersa.
+    %se ven las características.
+    disp = dispersa(A); 
     domn = dominante(A);
     neg = negativa(A);
     pos = positiva(A);
@@ -68,7 +69,7 @@ if n==m       %matriz cuadrada.
                 costos = [costos, opC7];
                 tiempo = [tiempo, t7];
                 
-                %Errores seidel.
+                %Errores Seidel.
                 figure
                 plot(e7, "-r")    %gráfico de los errores por iteración en seidel.
                 title("Errores Seidel");
@@ -87,7 +88,7 @@ if n==m       %matriz cuadrada.
     end
     
     %solo necesitan que la matriz sea cuadrada.
-    %gram-schmidt o QR.
+    %gs = gram-schmidt o QR.
     [res1, e1, opC1, t1] = funcion_gs(A,b);
     resultados = [resultados, res1];
     costos = [costos, opC1];
@@ -109,36 +110,11 @@ if n==m       %matriz cuadrada.
     tiempo = [tiempo, t5];
     
     %givens
-%    [res4, e4, opC4, t4] = funcion_givens(A, b);
-%    resultados = [resultados, res4];
-%    costos = [costos, opC4];
-%    errores = [errores, e4];
-%    tiempo = [tiempo, t4];
+   [res4, e4, opC4, t4] = funcion_givens(A, b);
+   resultados = [resultados, res4];
+   costos = [costos, opC4];
+   errores = [errores, e4];
+   tiempo = [tiempo, t4];
 end
-
-% Crear matriz con resultados, costos, errores y tiempo.
-
-
-% Gráficos
-
-%hold on
-
-
-% Resultado de los métodos.
-% figure
-% plot(res1, "-g")    %gráfico de la función gram schmit.
-% title("Resultado de los métodos");
-% hold on
-% plot(res2, "-r")
-% hold on
-% plot(res3, "-b")
-% %hold on
-% %plot(res4, "-k")
-% hold on
-% plot(res5, "-y")
-% hold on
-% plot(res6, "-c")
-% hold on
-% plot(res7, "-m")
 
 tiempoTotal = toc;

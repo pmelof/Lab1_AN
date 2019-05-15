@@ -21,3 +21,41 @@ Matriz 4225:
 ----------------------------------------------------------------
 Matriz 1089:
 
+- Tiempo total:  2.075696298726938e+04
+- Tiempos:
+	10.415334095664972	12.246252238393259	7.931765683242751	1.568355174899567e+02
+	t6= jacobi		t1= gram-schmidt	t2= LU			t5=householder
+- Errores:
+	1.159115526814099e-14	2.645404174808627e-15	2.373913887811701e-14
+	e1=gram-schmidt		e2= LU			e5= householder
+    e6 jacobi aparte en tabla
+- Costos:
+	355885200	3558852	8712	17424
+	c6=jacobi	c1= gs	c2= LU	c5=householder
+- Resultados:
+	blue=r5=householder
+	gren=r1=gs
+	red=r2=LU
+	c=r6=jacobi
+----------------------------------------------------------------
+----------------------------------------------------------------
+Matriz 289:
+
+- Tiempo total:  1.358079841963097e+02
+- Tiempos:
+	0.508811692412466	0.375590012087022	1.002947494508918	0.293802775064269	1.590826542182015	0.952924612484771	1.358074070138536e+02
+	t6= jacobi		t7=seidel		t1= gram-schmidt	t2= LU			t5=householder		t3=cholesky		t4=givens
+- Errores:
+	2.984058425395847e-15	1.009579602232137e-15	7.649509026213863e-15	1.454791219327843e-15	1.397193368858244e-15
+	e1=gram-schmidt		e2= LU			e5= householder		e4=givens		c3=cholesky
+    e6 jacobi aparte en tabla	e7 seidel aparte en tabla
+- Costos:
+	25085200	25027400	250852	2312	4624		749088		24597946
+	c6=jacobi	c7=seidel	c1= gs	c2= LU	c5=householder	c4=givens	c3=cholesky
+- Resultados:
+	blue=r5=householder
+	gren=r1=gs
+	red=r2=LU
+	c=r6=jacobi
+
+

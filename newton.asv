@@ -46,14 +46,10 @@ while norm(xnew - xold) > tol
     
     
     % Applying the Newton-Raphson method 
-    if iter>1
-        if iter>2
-            errores = [errores; norm(xnew(1)-xold(1))/norm(xnew(1)), norm(xnew(2)-xold(2) - xold(2))/norm(xnew(2)), norm(xnew(3))];
-        end
-        xold = xnew;
-    end
-    xnew = xold - J\[f;g;h];
-    resultados = [resultados;(xnew)'];
+    
+    while norm(xnew-xold
+    xnew = xold - J\[f;g;h]; 
+    %disp(sprintf('iter=%6.15f, x1=%6.15f, x2=%6.15f, x3=%6.15f', iter,xnew)); 
 end
 
 
